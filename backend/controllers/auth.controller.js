@@ -25,7 +25,7 @@ export const signup=async(req,res)=>{
             username,
             password:hashPassword,
             gender,
-            profilePic: gender==="female" ? boyProfilePic: girlProfilePic
+            profilePic: gender==="male" ? boyProfilePic: girlProfilePic
         })
         if(newUser){
             generateTokenAndSetCookie(newUser._id,res)
